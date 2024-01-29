@@ -111,4 +111,56 @@ i.none {
 .button:focus {
   box-shadow: 4px 2px 5px #000;
   border-color: #fff;
+}
+
+.searchBar {
+  padding: 0.5rem 0.5rem 1.5rem;
+}
+.searchBar .searchBar_form {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid lightgray;
+  border-radius: 500px;
+}
+.searchBar .searchBar_form .searchBar_text {
+  flex-grow: 1;
+  border: none;
+  margin-right: 0.25rem;
+  background-color: transparent;
+  color: #fff;
+  width: calc(100% - 52px);
+  font-size: 1.25rem;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  outline: none;
+}
+.searchBar .searchBar_form .searchBar_text::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.searchBar .searchBar_form .searchBar_text::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.searchBar .searchBar_form .searchBar_button {
+  border: none;
+}
+.searchBar .searchBar_form .searchBar_button i {
+  font-size: 1.7rem;
+}
+.searchBar .searchBar_form .searchBar_button:hover,
+.searchBar .searchBar_form .searchBar_button:focus {
+  border: none;
+  box-shadow: none;
+  text-shadow: 4px 2px 5px #000;
+}
+.searchBar .searchBar_form:focus-within,
+.searchBar .searchBar_form:hover {
+  box-shadow: 4px 2px 5px #000;
+}
+
+.classButtons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem 0.25rem;
 }/*# sourceMappingURL=main.css.map */
