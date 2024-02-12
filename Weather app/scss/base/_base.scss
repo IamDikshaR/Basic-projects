@@ -55,7 +55,25 @@
   i.none {
     display: none;
   }
-  
-  .block {
+  i.block {
     display: block;
   }
+  i.load{
+    // -webkit-transform: rotate(360deg);
+    // -webkit-transition-duration: 1s;
+    // -webkit-transition-delay: now;
+    // -webkit-animation-timing-function: linear;
+    // -webkit-animation-iteration-count: infinite;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+     from {
+        transform: rotate(0deg);
+     }
+     to {
+        transform: rotate(360deg);
+     }
+  }
+
+  

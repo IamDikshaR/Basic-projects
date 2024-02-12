@@ -59,10 +59,22 @@ i.none {
   display: none;
 }
 
-.block {
+i.block {
   display: block;
 }
 
+i.load {
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .offscreen {
   position: absolute;
   left: -10000px;
@@ -113,6 +125,28 @@ i.none {
   border-color: #fff;
 }
 
+.zero-vis {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .searchBar {
   padding: 0.5rem 0.5rem 1.5rem;
 }
@@ -360,4 +394,29 @@ i.none {
     justify-content: center;
     align-items: center;
   }
+}
+
+.rain {
+  background-color: rgba(0, 0, 255, 0.5);
+  background-image: url("../img/rain.jpg");
+}
+
+.snow {
+  background-color: rgba(0, 0, 255, 0.5);
+  background-image: url("../img/snow.jpg");
+}
+
+.night {
+  background-color: rgba(204, 0, 102, 0.5);
+  background-image: url("../img/night.jpg");
+}
+
+.fog {
+  background-color: darkslategray;
+  background-image: url("../img/fog.jpg");
+}
+
+.clouds {
+  background-color: rgba(0, 0, 255, 0.5);
+  background-image: url("../img/clouds.jpg");
 }/*# sourceMappingURL=main.css.map */

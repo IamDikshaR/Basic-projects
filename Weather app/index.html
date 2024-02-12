@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Weather App</title>
     <link rel="stylesheet" href="scss/main.css">
+    <script src="js/main.js" type="module"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <style>
@@ -27,7 +28,7 @@
         </section>
         <a href="#currentForecast" class="skip-link">Skip to Current conditions</a>
         <section id="currentForecast" class="currentForecast fade-in" role="region" aria-labelledby="currentForecast_location">
-            <h2 id="currentForecast_location" class="currentForecast_location">Current conditions</h2>
+            <!-- <h2 id="currentForecast_location" class="currentForecast_location">Current conditions</h2>
             <div id="currentForecast_conditions" class="currentForecast_conditions">
                 <div id="icon" class="icon"><i class="material-symbols-outlined">sunny</i></div>
                 <div class="temp">59°<div class="unit">F</div></div>
@@ -37,35 +38,35 @@
                 <div class="mintemp">Low 39°</div>
                 <div class="humidity">Humidity 44%</div>
                 <div class="wind">Wind 7 mph</div>
-            </div>
+            </div> -->
         </section>
         <a href="#dailyForecast" class="skip-link">Skip to Six Day Forecast</a>
         <nav id="navButtons" class="classButtons">
             <button id="getLocation" class="button" title="Get Location" aria-label="Get the current weather conditons for your current location">
-                <i class="material-symbols-outlined">location_on</i>
+                <i class="material-symbols-outlined mapMarker">location_on</i>
                 <i class="material-symbols-outlined none">sync</i>
             </button>
             <button id="home" class="button" title="Home weather" aria-label="Get the current weather conditons for your home location">
                 <i class="material-symbols-outlined">home</i>
-                <i class="material-symbols-outlined none">sync</i>
+                <i class="material-symbols-outlined none load">sync</i>
             </button>
             <button id="saveLocation" class="button" title="Save Location" aria-label="Save the current location as your home location">
                 <i class="material-symbols-outlined">save</i>
-                <i class="material-symbols-outlined none">sync</i>
+                <i class="material-symbols-outlined none load">sync</i>
             </button>
             <button id="unit" class="button" title="Toggle Measurements Units" aria-label="Toggle between metric and imperial measurement units">
                 <i class="material-symbols-outlined">analytics</i>
-                <i class="material-symbols-outlined none">sync</i>
+                <i class="material-symbols-outlined none load">sync</i>
             </button>
             <button id="refresh" class="button" title="Refresh Weather" aria-label="Refresh the current Weather conditions">
                 <i class="material-symbols-outlined">refresh</i>
-                <i class="material-symbols-outlined none">sync</i>
+                <i class="material-symbols-outlined none load">sync</i>
             </button>
         </nav>
         <hr class="fade-in">
         <section id="dailyForecast" class="dailyForecast fade-in" role="region" aria-labelledby="dailyForecast_title">
             <h2 id="daiyForecast_title" class="daiyForecast_title offscreen">Six day Forecast</h2>
-            <div id="dailyForecast_contents" class="dailyForecast_contents">
+            <!-- <div id="dailyForecast_contents" class="dailyForecast_contents">
                 <div class="forecastDay"><p class="dayAbbreviation">SUN</p><img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds"><p class="dayhigh">61°</p><p class="dayLow">44°</p></div>
                 <div class="forecastDay"><p class="dayAbbreviation">MON</p><img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds"><p class="dayhigh">62°</p><p class="dayLow">46°</p></div>
                 <div class="forecastDay"><p class="dayAbbreviation">TUE</p><img src="https://openweathermap.org/img/wn/04d.png" alt="overcast clouds"><p class="dayhigh">61°</p><p class="dayLow">52°</p></div>
@@ -73,7 +74,7 @@
                 <div class="forecastDay"><p class="dayAbbreviation">THU</p><img src="https://openweathermap.org/img/wn/10d.png" alt="moderate rain"><p class="dayhigh">69°</p><p class="dayLow">58°</p></div>
                 <div class="forecastDay"><p class="dayAbbreviation">FRI</p><img src="https://openweathermap.org/img/wn/04d.png" alt="overcast clouds"><p class="dayhigh">65°</p><p class="dayLow">57°</p></div>
                 <div class="forecastDay"><p class="dayAbbreviation">SAT</p><img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds"><p class="dayhigh">64°</p><p class="dayLow">57°</p></div>
-            </div>
+            </div> -->
         </section>
     </main>
 </body>
