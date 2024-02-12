@@ -5,9 +5,12 @@
 
 @import "components/a11y";
 @import "components/button";
+@import "components/fadeIn";
 
 @import "layouts/searchBar";
 @import "layouts/navButtons";
 @import "layouts/dailyForecasts";
 @import "layouts/currentForecasts";
+
+@import "themes/background";
 
