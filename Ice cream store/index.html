@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice cream store</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="store">
+        <h1 class="show">Hey Place your order here!<br>Make your own Ice-Cream 🍦😋</h1>
+        <h1 class="hide">Sorry the store is closed 😟</h1>
+    </div>
+    <div class="choice fruit-choice">
+        <label for="myFruit">Select a Fruit of your choice</label>
+            <select id="myFruit" name="fruit">
+                <option value="strawberry">Strawberry</option>
+                <option value="mango">Mango</option>
+                <option value="custard">Custard</option>
+                <option value="pineapple">Pineapple</option>
+                <option value="orange">Orange</option>
+                <option value="kiwi">Kiwi</option>
+                <option value="coconut">Coconut</option>
+            </select>
+    </div>
+    <div class="choice topping-choice">
+        <label for="myTopping">Select toppings of your choice</label>
+        <select id="myTopping" name="topping" multiple>
+            <option value="chocochip">Choco-Chip</option>
+            <option value="sprinkles">Rainbow Sprinkles</option>
+            <option value="jelly">Jelly bears</option>
+            <option value="fruit">Fruit slices</option>
+        </select>
+    </div>
+    <button>Make Ice-cream</button>
+</body>
+</html>
