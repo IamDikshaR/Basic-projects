@@ -14,8 +14,8 @@
 </head>
 <body>
     <div class="store">
-        <h1 class="show">Hey Place your order here!<br>Make your own Ice-Cream 🍦😋</h1>
-        <h1 class="hide">Sorry the store is closed 😟</h1>
+        <h1 class="open">Hey Place your order here!<br>Make your own Ice-Cream 🍦😋</h1>
+        <h1 class="hide close">Sorry the store is closed 😟</h1>
     </div>
     <div class="choice fruit-choice">
         <label for="myFruit">Select a Fruit of your choice</label>
@@ -36,8 +36,21 @@
             <option value="sprinkles">Rainbow Sprinkles</option>
             <option value="jelly">Jelly bears</option>
             <option value="fruit">Fruit slices</option>
+            <option value="peanut">Peanuts</option>
+            <option value="nuts">Nuts</option>
         </select>
     </div>
+    <div class="choice holder-choice">
+        <label for="myHolder">Select a Holder</label>
+            <select id="myHolder" name="holder">
+                <option value="cone">Cone</option>
+                <option value="cup">Cup</option>
+                <option value="waffle">Waffle</option>
+            </select>
+    </div>
     <button>Make Ice-cream</button>
+
+    <script src="app.js"></script>
+
 </body>
 </html>

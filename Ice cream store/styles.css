@@ -50,6 +50,15 @@ div.hide{
     color:red;
 }
 
+#myHolder{
+    /* box-sizing: border-box; */
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size:  20px;
+    color:purple;
+    margin: 0px 4px;
+}
+
 button{
     display:flex;
     margin:auto;
