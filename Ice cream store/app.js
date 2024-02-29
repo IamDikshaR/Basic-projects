@@ -18,12 +18,11 @@ let order = (time, work) =>{
             setTimeout(()=>{
                 resolve(work())
             }, time);
-            resolve(work())
         }
         else{
             // close.classList.toggle("hide");
             // open.classList.toggle("hide");
-            reject(console.log("Shop is closed"));
+            reject(new Error("Shop is closed"));
         }
     })
 }
