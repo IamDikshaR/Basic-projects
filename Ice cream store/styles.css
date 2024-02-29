@@ -27,6 +27,7 @@ div.hide{
     margin: 32px;
     font-size: 20px;
     font-weight: 600;
+    /* box-sizing: border-box; */
 }
 
 #myFruit{
@@ -38,7 +39,7 @@ div.hide{
     margin: 0px 4px;
 }
 
-#myTopping{
+/* #myTopping{
     display: inline-block;
     font-family: 'Raleway';
     font-size:  20px;
@@ -47,7 +48,21 @@ div.hide{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    color:red;
+    color:green;
+} */
+
+/* input[type="checkbox"]:checked{
+    color:green;
+} */
+
+.checkbox{
+    font-size: 16px;
+    font-weight: 400;
+}
+.topping-style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #myHolder{
@@ -55,9 +70,10 @@ div.hide{
     font-family: 'Raleway';
     font-weight: 800;
     font-size:  20px;
-    color:purple;
+    color:red;
     margin: 0px 4px;
 }
+
 
 button{
     display:flex;
