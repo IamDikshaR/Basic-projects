@@ -6,64 +6,101 @@ let stocks={
 }
 
 let is_shop_open = true;
-//choose store div and set h1 to show (use next sibling function)
+
 const open= document.querySelector(".open");
 const close= document.querySelector(".close");
-const display= document.getElementsByTagName("main");
-console.log(display)
+const display= document.querySelector(".main");
+const load= document.querySelector(".load");
+const btn = document.querySelector(".submit");
+const selection = document.querySelector(".selection");
+
+var fruit = document.getElementById("myFruit");
+var selectedOption = fruit.options[fruit.selectedIndex];
+var selectedFruit = selectedOption.value;
+var holder = document.getElementById("myHolder");
+var selectedOption = holder.options[holder.selectedIndex];
+var selectedHolder = selectedOption.value;
+
+
+function getSelectedValues() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    var selectedValues = [];
+    checkboxes.forEach(function(checkbox) {
+      selectedValues.push(checkbox.value);
+    });
+    // console.log("Selected Values: " + selectedValues.join(', '));
+    return selectedValues.join(', ');
+  }
 
 let order = (time, work) =>{
     return new Promise((resolve, reject)=>{
         if(is_shop_open){
-            // open.classList.toggle("hide");
-            // close.classList.toggle("hide");
             display.classList.add("hide");
             setTimeout(()=>{
                 resolve(work())
             }, time);
         }
         else{
-            // close.classList.toggle("hide");
-            // open.classList.toggle("hide");
             reject(new Error("Shop is closed"));
         }
     })
 }
 
-order(2000, ()=>console.log(`Order is being placed and ${stocks.fruits[0]} has been Selected`))
+(function (){
+    if(!is_shop_open){
+        open.classList.add("hide");
+        close.classList.remove("hide");
+        selection.classList.add("hide");
+    }
+})();
+
+btn.addEventListener("click", ()=>{
+order(2000, ()=>console.log(`Order is being placed and ${selectedFruit} has been Selected`))
 
 .then(()=>{
-    return order(0o0, ()=>console.log("Production has started"))
+    load.textContent = "Production has started";
+    return order(1000, ()=>console.log("Production has started"))
 })
 
 .then(()=>{
+    load.textContent = `${selectedFruit} has been chopped`;
     return order(2000, ()=>console.log("The fruit has been chopped"))
 })
 
 .then(()=>{
-    return order(1000, ()=>console.log(`${stocks.liquid[0]}, ${stocks.liquid[1]} and ${stocks.liquid[2]} were added`))
+    load.textContent = "Water, ice and milk were added";
+    return order(1000, ()=>console.log("Water,ice and milk were added"))
 })
 
 .then(()=>{
-    return order(1000, ()=>console.log("Start the machine"))
+    load.textContent = "Starting the machine";
+    return order(1000, ()=>console.log("Starting the machine"))
 })
 
 .then(()=>{
+    load.textContent = `Ice-cream placed on ${selectedHolder}`;
     return order(2000, ()=>console.log(`Ice-cream placed on ${stocks.holder[0]}`))
 })
 
 .then(()=>{
+    getSelectedValues();
+    load.textContent = `${getSelectedValues()} was selected`;
     return order(3000, ()=>console.log(`${stocks.toppings[0]} was selected`))
 })
 
 .then(()=>{
+    load.textContent = "Ice cream is ready and served!";
     return order(1000, ()=>console.log("Ice cream is ready and served"))
 })
 
 .catch(()=>{
+    // load.textContent = "Customer left";
     console.log("customer left");
 })
 
 .finally(()=>{
-    console.log("Thank you for visiting");
+    load.textContent = "Thank you for visiting 🤗!!!";
+    console.log("Done");
 })
+})
+
