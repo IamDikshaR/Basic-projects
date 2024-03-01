@@ -93,3 +93,8 @@ button:hover{
     background-color: greenyellow;
     color:black;
 }
+
+.load{
+    display:flex;
+    justify-content: center;
+}

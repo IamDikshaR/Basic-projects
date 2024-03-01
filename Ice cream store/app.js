@@ -9,12 +9,15 @@ let is_shop_open = true;
 //choose store div and set h1 to show (use next sibling function)
 const open= document.querySelector(".open");
 const close= document.querySelector(".close");
+const display= document.getElementsByTagName("main");
+console.log(display)
 
 let order = (time, work) =>{
     return new Promise((resolve, reject)=>{
         if(is_shop_open){
             // open.classList.toggle("hide");
             // close.classList.toggle("hide");
+            display.classList.add("hide");
             setTimeout(()=>{
                 resolve(work())
             }, time);
