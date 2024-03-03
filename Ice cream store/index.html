@@ -1,41 +1,45 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ice cream store</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body{
-            font-family: 'Raleway', sans-serif;
-        }
+      body {
+        font-family: "Raleway", sans-serif;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main class="main">
-        <div class="store">
-            <h1 class="open">Hey Place your order here!<br>Make your own Ice-Cream 🍦😋</h1>
-            <h1 class="hide close">Sorry the store is closed 😟</h1>
+      <div class="store">
+        <h1 class="open">
+          Hey Place your order here!<br />Make your own Ice-Cream 🍦😋
+        </h1>
+        <h1 class="hide close">Sorry the store is closed 😟</h1>
+      </div>
+      <section class="selection">
+        <div class="choice fruit-choice">
+          <label for="myFruit">Select a Fruit of your choice</label>
+          <select id="myFruit" name="fruit">
+            <option value="Strawberry">Strawberry</option>
+            <option value="Mango">Mango</option>
+            <option value="Custard">Custard</option>
+            <option value="Pineapple">Pineapple</option>
+            <option value="Orange">Orange</option>
+            <option value="Kiwi">Kiwi</option>
+            <option value="Coconut">Coconut</option>
+          </select>
         </div>
-        <section class="selection">
-            <div class="choice fruit-choice">
-                <label for="myFruit">Select a Fruit of your choice</label>
-                    <select id="myFruit" name="fruit">
-                        <option value="Strawberry">Strawberry</option>
-                        <option value="Mango">Mango</option>
-                        <option value="Custard">Custard</option>
-                        <option value="Pineapple">Pineapple</option>
-                        <option value="Orange">Orange</option>
-                        <option value="Kiwi">Kiwi</option>
-                        <option value="Coconut">Coconut</option>
-                    </select>
-        
-            </div>
-            <div class="choice topping-choice">
-                <div class="topping-style">
-                    <label for="myTopping">Select toppings of your choice</label><br>   
-                <!-- <select id="myTopping" name="topping" multiple>
+        <div class="choice topping-choice">
+          <div class="topping-style">
+            <label for="myTopping">Select toppings of your choice</label><br />
+            <!-- <select id="myTopping" name="topping" multiple>
                     <option value="chocochip">Choco-Chip</option>
                     <option value="sprinkles">Rainbow Sprinkles</option>
                     <option value="jelly">Jelly bears</option>
@@ -43,37 +47,48 @@
                     <option value="peanut">Peanuts</option>
                     <option value="nuts">Nuts</option>
                 </select> -->
-                <div>
-                <input type="checkbox" id="chocochip" name="chocochip" value="chocochip">
-                <label for="chocochip" class="checkbox"> Choco-Chip</label><br>
-                <input type="checkbox" id="sprinkles" name="sprinkles" value="sprinkles">
-                <label for="sprinkles" class="checkbox"> Rainbow Sprinkles</label><br>
-                <input type="checkbox" id="jelly" name="jelly" value="jelly">
-                <label for="jelly" class="checkbox">Jelly bears</label><br>
-                <input type="checkbox" id="fruit" name="fruit" value="fruit">
-                <label for="fruit" class="checkbox">Fruit slices</label><br>
-                <input type="checkbox" id="peanut" name="peanut" value="peanut">
-                <label for="peanut" class="checkbox">Peanut</label><br>
-                <input type="checkbox" id="nuts" name="nuts" value="nuts">
-                <label for="nuts" class="checkbox">Nuts</label><br>
-                </div>
-                
-                </div>
+            <div>
+              <input
+                type="checkbox"
+                id="chocochip"
+                name="chocochip"
+                value="chocochip"
+              />
+              <label for="chocochip" class="checkbox"> Choco-Chip</label><br />
+              <input
+                type="checkbox"
+                id="sprinkles"
+                name="sprinkles"
+                value="sprinkles"
+              />
+              <label for="sprinkles" class="checkbox"> Rainbow Sprinkles</label
+              ><br />
+              <input type="checkbox" id="jelly" name="jelly" value="jelly" />
+              <label for="jelly" class="checkbox">Jelly bears</label><br />
+              <input type="checkbox" id="fruit" name="fruit" value="fruit" />
+              <label for="fruit" class="checkbox">Fruit slices</label><br />
+              <input type="checkbox" id="peanut" name="peanut" value="peanut" />
+              <label for="peanut" class="checkbox">Peanut</label><br />
+              <input type="checkbox" id="nuts" name="nuts" value="nuts" />
+              <label for="nuts" class="checkbox">Nuts</label><br />
             </div>
-            <div class="choice holder-choice">
-                <label for="myHolder">Select a Holder</label>
-                    <select id="myHolder" name="holder">
-                        <option value="cone">Cone</option>
-                        <option value="cup">Cup</option>
-                        <option value="waffle">Waffle</option>
-                    </select>
-            </div>
-            <button class="submit">Make Ice-cream</button>
-        </section>    
+          </div>
+        </div>
+        <div class="choice holder-choice">
+          <label for="myHolder">Select a Holder</label>
+          <select id="myHolder" name="holder">
+            <option value="cone">Cone</option>
+            <option value="cup">Cup</option>
+            <option value="waffle">Waffle</option>
+          </select>
+        </div>
+        <button class="submit" onclick="saveSelectedValue([myFruit, myHolder])">
+          Make Ice-cream
+        </button>
+      </section>
     </main>
-     
+
     <div class="load"></div>
     <script src="app.js"></script>
-
-</body>
+  </body>
 </html>
