@@ -22,23 +22,22 @@ const load = document.querySelector(".load");
 const btn = document.querySelector(".submit");
 const selection = document.querySelector(".selection");
 
-var fruit = document.getElementById("myFruit");
-var selectedOption = fruit.options[fruit.selectedIndex];
-var selectedFruit = selectedOption.value;
-var holder = document.getElementById("myHolder");
-var selectedOption = holder.options[holder.selectedIndex];
-var selectedHolder = selectedOption.value;
+// var fruit = document.getElementById("myFruit");
+// var selectedOption = fruit.options[fruit.selectedIndex];
+// var selectedFruit = selectedOption.value;
+// var holder = document.getElementById("myHolder");
+// var selectedOption = holder.options[holder.selectedIndex];
+// var selectedHolder = selectedOption.value;
+let selectedFruit = "";
+let selectedHolder = "";
 
-function saveSelectedValue([...args]) {
-  for (let i = 0; i < args.length; i++) {
-    var dropdown = document.getElementById("args[i]");
-    // Get the selected option
-    var selectedOption = dropdown.options[dropdown.selectedIndex];
-    // Get the value of the selected option
-    var selectedValue = selectedOption.value;
+function saveSelections() {
+  // Get the selected values from both dropdown menus
+  selectedFruit = document.getElementById("myFruit").value;
+  selectedHolder = document.getElementById("myHolder").value;
 
-    return selectedValue;
-  }
+  console.log("Selected Fruit: " + selectedFruit);
+  console.log("Selected Holder: " + selectedHolder);
 }
 
 function getSelectedValues() {
@@ -74,11 +73,7 @@ let order = (time, work) => {
 
 btn.addEventListener("click", () => {
   order(2000, () =>
-    console.log(
-      `Order is being placed and ${saveSelectedValue(
-        "myFruit"
-      )} has been Selected`
-    )
+    console.log(`Order is being placed and ${selectedFruit} has been Selected`)
   )
     .then(() => {
       load.textContent = "Production has started";
@@ -86,7 +81,7 @@ btn.addEventListener("click", () => {
     })
 
     .then(() => {
-      load.textContent = `${saveSelectedValue("myFruit")} has been chopped`;
+      load.textContent = `${selectedFruit} has been chopped`;
       return order(2000, () => console.log("The fruit has been chopped"));
     })
 
@@ -101,7 +96,7 @@ btn.addEventListener("click", () => {
     })
 
     .then(() => {
-      load.textContent = `Ice-cream placed on ${saveSelectedValue("myHolder")}`;
+      load.textContent = `Ice-cream placed on ${selectedHolder}`;
       return order(2000, () =>
         console.log(`Ice-cream placed on ${stocks.holder[0]}`)
       );
